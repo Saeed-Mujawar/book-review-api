@@ -61,4 +61,4 @@ celerybeat.pid
 node_modules/
 
 # Exclude test folder in src
-/src/test/
+/src/tests/
