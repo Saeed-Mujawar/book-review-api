@@ -242,17 +242,22 @@ source env/bin/activate   # On Windows: env\Scripts\activate
 3. **Install the required dependencies:**
 
    ```bash
-pip install -r requirements.txt
+    pip install -r requirements.txt
 4. **Set up the environment variables:**
 
    Create a .env file in the root directory of the project and add the necessary environment variables.
 
-5. **Run the database migrations:**
+5. Set up environment variables by copying the example configuration:
+    ```bash
+    cp .env.example .env
+    ```
+
+6. **Run the database migrations:**
 
    ```bash
    alembic upgrade head
 
-6. **Start the FastAPI server:**
+7. **Start the FastAPI server:**
 
    ```bash
    fastapi dev src/  
