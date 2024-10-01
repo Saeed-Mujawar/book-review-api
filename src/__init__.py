@@ -30,6 +30,12 @@ register_all_errors(app)
 
 register_middleware(app)
 
+@app.get("/", tags=["root"])
+async def read_root():
+    return {
+        "message": "Welcome to the Book Portal API!",
+        "instructions": "To test the API, visit the Swagger UI at: https://book-review-api-k7hl.onrender.com/docs"
+    }
 
 app.include_router(book_router, prefix=f"{version_prefix}/books", tags=["books"])
 app.include_router(auth_router, prefix=f"{version_prefix}/auth", tags=["auth"])
